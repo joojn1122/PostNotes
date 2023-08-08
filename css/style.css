@@ -1,0 +1,47 @@
+body {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 100%;
+	height: calc(100% - 20px);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex;
+	align-items: center;
+	font-family: 'Roboto', 'LucidaGrande', sans-serif;
+	background-color: black;
+}
+
+#editor {
+	font-size: 14px;
+	padding: 10px;
+	background-color: rgb(24, 24, 24);
+	color: whitesmoke;
+	margin: 0;
+	width: calc(100% - 20px);
+}
+
+.ql-snow .ql-stroke {
+	stroke: whitesmoke;
+}
+
+.ql-snow .ql-fill {
+	fill: whitesmoke;
+}
+
+.ql-snow .ql-picker {
+	color: whitesmoke;
+}
+
+.ql-snow .ql-picker-options {
+	background-color: rgb(24, 24, 24);
+	color: whitesmoke;
+}
+
+.ql-toolbar {
+	margin: 0;
+	width: calc(100% - 20px);
+	background-color: #292928;
+}
