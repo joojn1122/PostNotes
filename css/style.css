@@ -21,6 +21,7 @@ body {
 	color: whitesmoke;
 	margin: 0;
 	width: calc(100% - 20px);
+	height: calc(100% - 40px);
 }
 
 .ql-snow .ql-stroke {
@@ -44,4 +45,27 @@ body {
 	margin: 0;
 	width: calc(100% - 20px);
 	background-color: #292928;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	cursor: default;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+	background: rgb(60, 60, 60); 
+	border-radius: 5px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #5f5f5f; 
+	border-radius: 5px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #838383; 
+	cursor: default;
 }
