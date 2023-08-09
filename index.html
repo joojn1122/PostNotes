@@ -11,6 +11,7 @@
 		<div id="editor"></div>
 		
 		<script src="./lib/quill.js"></script>
+		<script src="./cep/CEP.js"></script>
 		<script>
 			let quill = new Quill('#editor', {
 				theme: 'snow',
@@ -26,7 +27,7 @@
 					]
 				},
 			});
-				
+
 			// All of this shits doesn't work
 			// FIX: Maybe later
 
@@ -43,19 +44,12 @@
 				}
 			}
 
-			function saveData(data) {
-				window.__adobe_cep__.evalScript(
-					"$._PN_.saveData(" + JSON.stringify(quill.editor.delta) + ")",
-					function(data) {}
-				);
-			}
+			const runner = new Runner("_PN_");
+			runner.getSavedData().then(loadData);
 
-			window.__adobe_cep__.evalScript(
-				"$._PN_.getSavedData()",
-				loadData
-			);
-
-			window.__adobe_cep__.addEventLinstener("documentSaved", saveData);
+			window.__adobe_cep__.addEventListener("documentSaved", function(data) {
+				runner.saveData(JSON.stringify(quill.editor.delta));
+			});
 
 		</script>
 	</body>
