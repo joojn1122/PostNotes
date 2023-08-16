@@ -7,3 +7,9 @@ This simple extension adds a simple notepad window to your premiere project with
 
 ### Preview
 <img src="screenshots/preview.png">
+
+### Installation
+- Download this repo
+- Copy PostNotes directory to the "C:\Program Files\Adobe\Adobe Premiere Pro <your-version>\CEP\extensions"
+- Reload premiere pro
+- In the extensions tab, click on PostNotes 
